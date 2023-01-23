@@ -1,9 +1,9 @@
-# CSE
+## __CSE__
 Causal Subobject Explanations
 
 For IJCAI 2023 submission
 
-# Abstract
+## __Abstract__
 
 Automatic obfuscation of regions in images using
 machine learning explanation has emerged as a crit-
