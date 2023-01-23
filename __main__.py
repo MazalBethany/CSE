@@ -38,7 +38,6 @@ SEG_MAP = {
 }
 
 
-
 def main(attr_map: int = 0, 
          seg_map: int = 0,
          output_class: int = 0,
