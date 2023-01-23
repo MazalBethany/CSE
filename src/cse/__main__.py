@@ -1,8 +1,7 @@
 import torch
-from trainer import *
+from src.cse.trainer import *
 import torchvision.transforms as transforms
-import torchvision
-from re_alogirthms import *
+from src.cse.re_alogirthms import *
 from PIL import Image
 
 import warnings
