@@ -237,28 +237,28 @@ def segmentation_info_slic(image, num_segments, compactness):
     return(information_for_each_segment, segments_slic, num_segments)
 
 
-def segmentation_info_felzenszwalb(image, scale, sigma, min_size):
-    img_np = image.detach().cpu().squeeze().numpy()
-    segments_felz = felzenszwalb(img_np, scale=scale, sigma=sigma, min_size=min_size)
-    num_segments = len(np.unique(segments_slic))
-    list_unique_regions = np.unique(segments_slic)
-    segment_pixel_num_list = []
-    total_pixels = 0
-    for i in (list_unique_regions):
-        num_pixels = np.count_nonzero(segments_slic == i)
-        segment_pixel_num_list.append(num_pixels)
-        total_pixels += num_pixels
+# def segmentation_info_felzenszwalb(image, scale, sigma, min_size):
+#     img_np = image.detach().cpu().squeeze().numpy()
+#     segments_felz = felzenszwalb(img_np, scale=scale, sigma=sigma, min_size=min_size)
+#     num_segments = len(np.unique(segments_slic))
+#     list_unique_regions = np.unique(segments_slic)
+#     segment_pixel_num_list = []
+#     total_pixels = 0
+#     for i in (list_unique_regions):
+#         num_pixels = np.count_nonzero(segments_slic == i)
+#         segment_pixel_num_list.append(num_pixels)
+#         total_pixels += num_pixels
     
     
-    information_for_each_segment = []
-    for i in (list_unique_regions):
-        image_list = []
-        image_list.append(i)
-        image_list.append(segment_pixel_num_list[i-1])
-        image_list.append(total_pixels)
-        information_for_each_segment.append(image_list)
+#     information_for_each_segment = []
+#     for i in (list_unique_regions):
+#         image_list = []
+#         image_list.append(i)
+#         image_list.append(segment_pixel_num_list[i-1])
+#         image_list.append(total_pixels)
+#         information_for_each_segment.append(image_list)
 
-    return(information_for_each_segment, segments_slic, num_segments)
+#     return(information_for_each_segment, segments_slic, num_segments)
 
 
 def softmax_score(num_total_pixels, num_obf_pixels, model, image, SMU_class_index):
