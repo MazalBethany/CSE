@@ -156,3 +156,5 @@ cython_debug/
 
 # img files & BASS output & annotations
 labelme
+BASS
+scikit_image
