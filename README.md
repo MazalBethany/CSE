@@ -34,8 +34,7 @@ obfuscate the harmful regions in these images,
 thereby rendering them safe.
 
 
-![](./Screenshot%202023-03-25%20110536.png)
-
+![](./img.png)
 
 
 This code provides the implementation of the CSE algorithm.
